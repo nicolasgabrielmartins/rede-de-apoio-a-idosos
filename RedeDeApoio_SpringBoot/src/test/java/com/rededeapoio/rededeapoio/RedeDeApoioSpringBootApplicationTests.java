@@ -1,4 +1,4 @@
-package com.rededeapoio.RedeDeApoio_SpringBoot;
+package com.rededeapoio.rededeapoio;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
