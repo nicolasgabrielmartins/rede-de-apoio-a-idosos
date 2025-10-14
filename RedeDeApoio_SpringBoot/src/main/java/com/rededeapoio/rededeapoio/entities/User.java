@@ -1,8 +1,14 @@
 package com.rededeapoio.rededeapoio.entities;
 
+import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.rededeapoio.rededeapoio.enums.UserRole;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
@@ -12,38 +18,43 @@ import java.util.List;
 @Entity
 public class User implements UserDetails {
 
-    @Override
-    public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of();
-    }
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //NÃO SEI PARA QUE SERVE
+
+    private Long id;
+    private String name;
+    private String email;
+    private String password;
+
+    private UserRole UserRole;
 
     @Override
-    public String getPassword() {
-        return "";
+    public Collection<? extends GrantedAuthority> getAuthorities() { //NÃO SEI PARA QUE SERVE
+        return List.of(new SimpleGrantedAuthority(userRole.name()));
     }
 
     @Override
     public String getUsername() {
-        return "";
+        return email;
     }
 
     @Override
     public boolean isAccountNonExpired() {
-        return UserDetails.super.isAccountNonExpired();
+        return true;//UserDetails.super.isAccountNonExpired();
     }
 
     @Override
     public boolean isAccountNonLocked() {
-        return UserDetails.super.isAccountNonLocked();
+        return true; //UserDetails.super.isAccountNonLocked();
     }
 
     @Override
     public boolean isCredentialsNonExpired() {
-        return UserDetails.super.isCredentialsNonExpired();
+        return true;//UserDetails.super.isCredentialsNonExpired();
     }
 
     @Override
     public boolean isEnabled() {
-        return UserDetails.super.isEnabled();
+        return true;//UserDetails.super.isEnabled();
     }
 }

@@ -1,0 +1,5 @@
+### ANOTAÇÕES PARA PESQUISA ###
+
+1. Entender melhor o Spring e coisas como @Data e @Entity, e para que serve?
+
+2.
