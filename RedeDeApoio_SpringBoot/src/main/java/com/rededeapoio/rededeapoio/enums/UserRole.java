@@ -1,6 +1,7 @@
 package com.rededeapoio.rededeapoio.enums;
 
-import com.fasterxml.jackson.annotation.JsonSubTypes;
+public enum UserRole {
 
-public class UserRole {
+    ADMIN, EMPLOYEE
+    
 }
