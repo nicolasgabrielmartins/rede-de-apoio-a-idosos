@@ -1,5 +1,7 @@
 package com.rededeapoio.rededeapoio.services.auth;
 
+import com.rededeapoio.rededeapoio.dto.SignupRequest;
+import com.rededeapoio.rededeapoio.dto.UserDto;
 import com.rededeapoio.rededeapoio.entities.User;
 import com.rededeapoio.rededeapoio.enums.UserRole;
 import com.rededeapoio.rededeapoio.repositories.UserRepository;
@@ -29,5 +31,11 @@ public class AuthServiceImpl implements AuthService{
         } else{
             System.out.println("Admin account already exist!");
         }
+    }
+
+    @Override
+    public UserDto signupUser(SignupRequest signupRequest) {
+        new User()
+        return null;
     }
 }
