@@ -5,5 +5,7 @@ import com.rededeapoio.rededeapoio.dto.UserDto;
 
 public interface AuthService {
 
-    UserDto signupUser(SignupRequest signupRequest)
+    UserDto signupUser(SignupRequest signupRequest);
+    boolean hasUserWithEmail(String email);
+
 }

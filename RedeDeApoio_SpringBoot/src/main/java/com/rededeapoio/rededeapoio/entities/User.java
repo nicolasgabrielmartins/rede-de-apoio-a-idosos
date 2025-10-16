@@ -1,6 +1,7 @@
 package com.rededeapoio.rededeapoio.entities;
 
 import com.fasterxml.jackson.annotation.JsonSubTypes;
+import com.rededeapoio.rededeapoio.dto.UserDto;
 import com.rededeapoio.rededeapoio.enums.UserRole;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -55,5 +56,14 @@ public class User implements UserDetails {
     @Override
     public boolean isEnabled() {
         return true;//UserDetails.super.isEnabled();
+    }
+
+    public UserDto getUserDto(){
+        UserDto userDto = new UserDto();
+        userDto.setId(id);
+        userDto.setName(name);
+        userDto.setEmail(email);
+        userDto.setUserRole(userRole);
+        return userDto;
     }
 }
