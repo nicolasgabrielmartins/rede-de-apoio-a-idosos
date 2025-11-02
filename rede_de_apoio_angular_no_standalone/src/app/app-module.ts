@@ -6,6 +6,7 @@ import { App } from './app';
 import { Login } from './auth/components/login/login';
 import { Signup } from './auth/components/signup/signup';
 import { DemoAngularMaterialModule } from './DemoAngularMaterialModule';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { DemoAngularMaterialModule } from './DemoAngularMaterialModule';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    DemoAngularMaterialModule
+    DemoAngularMaterialModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners()
