@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap');
+
+body{
+    font-family: "Zalando Sans SemiExpanded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+}
+.navbar{
+    background-color: transparent;
+    padding: 0px !important;
+    display: block;
+}
+
+.container{
+    justify-content: space-between !important; 
+    height: 10vh !important;
+}
+
+.navbar-brand.brand-name{
+    margin-left: 3vw;
+    font: 5vh;
+}
+
+.navbar-profile-img{
+    border-radius: 50%; 
+    height: 5vh;
+    width: auto;
+}
+
+#section-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255);
+    height: 88vh;
+    background-image: url("../assets/idosos-de-maos-dadas.jpg");
+    background-repeat: no-repeat;
+    background-size: 40vw;
+    background-position: center right;
+
+    .d-flex{
+        padding: 1vw;
+        width: 50dvw;
+        border-radius: 28px;
+        border: 0.5px solid #2c2c2c;
+        background-color: white;
+
+        search-btn{
+            background-color: black;
+        }
+        .search{
+            border: none;
+            outline: none;
+            background: none;
+            padding-left: 1vw;
+            padding-right: 1vw;
+            background-color: transparent;
+            width: 100%;
+        }
+    }
+    h1{
+        font-size: 3vw !important;;
+    }
+    
+    p{
+        font-size: 1.5vw !important;
+        margin-bottom: 3vh !important;
+    }
+}

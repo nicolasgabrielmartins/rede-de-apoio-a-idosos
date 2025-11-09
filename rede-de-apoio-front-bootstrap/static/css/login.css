@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap');
+
+body{
+    font-family: "Zalando Sans SemiExpanded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+    height: 100vh;
+    background-image: url("../assets/idosos-de-maos-dadas.jpg");
+    background-repeat: no-repeat;
+    background-size: 40vw;
+    background-position: center right;
+    @media (max-width: 1000px) {
+        background-size: 50vh;
+    }
+}
+.navbar{
+    background-color: transparent;
+    padding: 0px !important;
+    display: block;
+    .container{
+        justify-content: space-between !important; 
+        height: 10vh !important;
+    }
+    
+    .navbar-brand.brand-name{
+        margin-left: 3vw;
+        font: 5vh;
+    }
+    
+    .navbar-profile-img{
+        border-radius: 50%; 
+        height: 5vh;
+        width: auto;
+    }
+}
+
+
+
+.container-form{
+  background-color: transparent;
+  width: 65vw;
+  padding: 2.5vw 10vw;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+.container-form .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+}
+
+.content form .user-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 0 12px 0;
+}
+form .user-details .input-box {
+  margin-bottom: 15px;
+  width: calc(100% / 2 - 20px);
+  
+}
+form .input-box span.details {
+  display: block;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+.user-details .input-box input {
+  height: 45px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid #ccc;
+  border-bottom-width: 2px;
+  transition: all 0.3s ease;
+}
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+  border-color: #9b59b6;
+}
+form .category-details .category-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+form .category {
+  display: flex;
+  width: 80%;
+  margin: 14px 0;
+  justify-content: space-between;
+}
+form .category label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+form .category label .dot {
+  height: 1vw !important;
+  width: 1vw !important;
+  border-radius: 50%;
+  margin-right: 10px;
+  background: #d9d9d9;
+  border: 5px solid transparent;
+  transition: all 0.3s ease;
+}
+#dot-1:checked~.category label .one,
+#dot-2:checked~.category label .two,
+#dot-3:checked~.category label .three {
+  background: #000000;
+}
+form input[type="radio"] {
+  display: none;
+}
+form .button {
+  height: 45px;
+  margin: 35px 0
+}
+form .button input {
+  height: 100%;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: rgb(44, 44, 44)
+}
+form .button input:hover {
+  background: rgb(44, 44, 44)
+}
+/* Responsive media query code for mobile devices */
+@media(max-width: 900px) {
+  .container-form {
+    max-width: 100%;
+  }
+  form .user-details .input-box {
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  form .category {
+    width: 100%;
+  }
+  .content form .user-details {
+    max-height: 300px;
+    overflow-y: scroll;
+  }
+  .user-details::-webkit-scrollbar {
+    width: 5px;
+  }
+}
+/* Responsive media query code for mobile devices */
+@media(max-width: 900px) {
+  .container-form .content .category {
+    flex-direction: column;
+  }
+}

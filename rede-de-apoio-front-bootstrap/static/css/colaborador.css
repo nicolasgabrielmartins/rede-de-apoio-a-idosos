@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+SemiExpanded:ital,wght@0,200..900;1,200..900&display=swap');
+
+body{
+    font-family: "Zalando Sans SemiExpanded", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: auto;
+    font-style: normal;
+}
+.navbar{
+    background-color: transparent;
+    padding: 0px !important;
+    display: block;
+}
+
+.container{
+    justify-content: space-between !important; 
+    height: 10vh !important;
+}
+
+.navbar-brand.brand-name{
+    margin-left: 3vw;
+    font: 5vh;
+}
+
+.navbar-profile-img{
+    border-radius: 50%; 
+    height: 5vh;
+    width: auto;
+}
